@@ -11,8 +11,11 @@
 
 int _printf(const char *format, ...)
 {
+
 	va_list args;
 	int count_characters = 0;
+	int index;
+	int search_specifier;
 	const char *ptr_char_format;
 	print_function_t specifiers[] = {
 		{'c', print_char},
@@ -24,11 +27,24 @@ int _printf(const char *format, ...)
 	};
 	va_start(args, format);
 
+	if (!format)
+	{
+		va_end(args);
+		return (-1);
+	}
+  
 	for (ptr_char_format = format; *ptr_char_format != '\0'; ptr_char_format++)
 	{
 		if (*ptr_char_format == '%')
 		{
-			int index = 0;
+			if (*(ptr_char_format + 1) == '\0')
+			{
+				va_end(args);
+				return (-1);
+			}
+
+			index = 0;
+			search_specifier = 0;
 
 			while (specifiers[index].specifier != '\0')
 			{
@@ -36,9 +52,15 @@ int _printf(const char *format, ...)
 				{
 					count_characters += specifiers[index].f(args);
 					ptr_char_format++;
+					search_specifier = 1;
 					break;
 				}
 				index++;
+			}
+
+			if (!search_specifier)
+			{
+				count_characters += _putchar('%');
 			}
 		}
 		else
