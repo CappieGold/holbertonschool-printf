@@ -42,3 +42,35 @@ int print_percent(va_list args)
 	(void)args;
 	return (_putchar('%'));
 }
+
+int print_int(va_list args)
+{
+	int temp;
+	int digits;
+	int num = va_arg(args, int);
+	int count = 0;
+
+	if (num < 0)
+	{
+		count += _putchar('-');
+		num = -num;
+	}
+
+	temp = num;
+	digits = 1;
+
+	while (temp / 10 != 0)
+	{
+		digits *= 10;
+		temp /= 10;
+	}
+
+	while (digits != 0)
+	{
+		count += _putchar((num / digits) + '0');
+		num %= digits;
+		digits /= 10;
+	}
+
+	return (count);
+}

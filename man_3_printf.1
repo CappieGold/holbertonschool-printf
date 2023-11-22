@@ -1,0 +1,41 @@
+.TH printf 3 "22 November 2023"
+.SH NAME
+_printf \- formatted printing function
+
+.SH SYNOPSIS
+.B #include <main.h>
+.br
+.nf
+int _printf(const char *format, ...);
+.fi
+
+.SH DESCRIPTION
+The \fB_printf\fR function analyzes the format string \fIformat\fR and prints based on encountered format specifiers.
+
+.SH ASSOCIATED FUNCTIONS
+.SS print_char
+Prints a character.
+.SS print_str
+Prints a string of characters.
+.SS print_percent
+Prints a percentage sign.
+.SS print_int
+Prints an integer.
+
+.SH PARAMETERS
+\fIformat\fR: Format string with specifiers for the arguments to print.
+\fI...\fR: Variable arguments corresponding to the format specifiers in \fIformat\fR.
+
+.SH RETURNS
+This function returns the number of characters printed. In case of an error, it returns -1.
+
+.SH USAGE EXAMPLES
+To print a character: \fB_printf("%c", 'A');\fR
+To print a string: \fB_printf("%s", "Hello");\fR
+To print an integer: \fB_printf("%d", 42);\fR
+
+.SH LIMITATIONS
+This version of _printf does not support all format specifiers of the standard printf function. It was designed for limited use.
+
+.SH SEE ALSO
+.BR printf "(3)"
