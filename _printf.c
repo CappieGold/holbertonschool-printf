@@ -32,7 +32,7 @@ int _printf(const char *format, ...)
 		va_end(args);
 		return (-1);
 	}
-
+  
 	for (ptr_char_format = format; *ptr_char_format != '\0'; ptr_char_format++)
 	{
 		if (*ptr_char_format == '%')

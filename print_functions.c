@@ -43,6 +43,12 @@ int print_percent(va_list args)
 	return (_putchar('%'));
 }
 
+/**
+ * print_int - print integer in standar output
+ * @args: argument for %d et %i
+ * Return: count of characters write
+*/
+
 int print_int(va_list args)
 {
 	int temp;
