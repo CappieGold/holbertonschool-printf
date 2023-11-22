@@ -1,4 +1,3 @@
-.TH printf 3 "22 November 2023"
 .SH NAME
 _printf \- formatted printing function
 
@@ -39,3 +38,4 @@ This version of _printf does not support all format specifiers of the standard p
 
 .SH SEE ALSO
 .BR printf "(3)"
+.TH printf 3 "22 November 2023"
