@@ -23,13 +23,13 @@ int _printf(const char *format, ...)
 		{'\0', NULL}
 	};
 	va_start(args, format);
-  
+
 	for (ptr_char_format = format; *ptr_char_format != '\0'; ptr_char_format++)
 	{
 		if (*ptr_char_format == '%')
 		{
 			int index = 0;
-      
+
 			while (specifiers[index].specifier != '\0')
 			{
 				if (specifiers[index].specifier == *(ptr_char_format + 1))
