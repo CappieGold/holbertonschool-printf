@@ -1,3 +1,7 @@
 main.c
 man_3_printf.1
 _putchar.c
+.editorconfig
+a.out
+.gitignore
+.gitignore
