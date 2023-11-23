@@ -53,10 +53,11 @@ int print_int(va_list args)
 {
 	int temp;
 	int digits;
-	int num = va_arg(args, int);
+	unsigned int argument = va_arg(args, unsigned int);
+	unsigned int num = argument;
 	int count = 0;
 
-	if (num < 0)
+	if ((int)num < 0)
 	{
 		count += _putchar('-');
 		num = -num;
