@@ -53,7 +53,7 @@ int print_int(va_list args)
 {
 	int temp;
 	int digits;
-	unsigned int argument = va_arg(args, int);
+	unsigned int argument = va_arg(args, unsigned int);
 	int num = argument;
 	int count = 0;
 
