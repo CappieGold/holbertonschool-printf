@@ -55,5 +55,5 @@ Example using valgrind:
 
 ![Flowchart](https://github.com/CappieGold/holbertonschool-printf/raw/master/image.png)
 
-##Authors
+## Authors
 This project was created and maintained by [Carpentier Jeremy](https://github.com/CappieGold) and [Huybrechts Jonathan](https://github.com/Miniknacky).
