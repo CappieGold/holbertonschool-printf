@@ -1,3 +1,5 @@
+.TH _printf 3 "22 November 2023" "Version 1.0" "User Commands"
+
 .SH NAME
 _printf \- formatted printing function
 
@@ -9,17 +11,22 @@ int _printf(const char *format, ...);
 .fi
 
 .SH DESCRIPTION
-The \fB_printf\fR function analyzes the format string \fIformat\fR and prints based on encountered format specifiers.
+The \fB_printf\fR function formats and prints output according to the specified format string \fIformat\fR. The format string can contain ordinary characters and format specifiers that begin with a percent sign (%).
 
-.SH ASSOCIATED FUNCTIONS
-.SS print_char
-Prints a character.
-.SS print_str
-Prints a string of characters.
-.SS print_percent
-Prints a percentage sign.
-.SS print_int
-Prints an integer.
+.SH FORMAT SPECIFIERS
+The following format specifiers are supported:
+
+.SS \fB%c\fR
+Prints a character. The corresponding argument must be of type \fIint\fR.
+
+.SS \fB%s\fR
+Prints a null-terminated string. The corresponding argument must be of type \fIconst char *\fR.
+
+.SS \fB%d, %i\fR
+Prints a signed decimal integer. The corresponding argument must be of type \fIint\fR.
+
+.SS \fB%\fR
+Prints a percent sign. No argument is required.
 
 .SH PARAMETERS
 \fIformat\fR: Format string with specifiers for the arguments to print.
@@ -38,4 +45,7 @@ This version of _printf does not support all format specifiers of the standard p
 
 .SH SEE ALSO
 .BR printf "(3)"
-.TH printf 3 "22 November 2023"
+
+.SH AUTHORS
+Carpentier Jérémy,
+Huybrechts Jonathan
