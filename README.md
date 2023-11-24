@@ -22,6 +22,7 @@ Here is an example demonstrating the usage of _printf:
 #include "main.h"
 #include <stdio.h>
 
+```bash
 int main(void)
 {
     _printf("Hey!! If you are %s, it's because we are %d good students.\n", "reading this properly", 2);
@@ -29,6 +30,7 @@ int main(void)
     }
 
 Result: `Hey!! If you are reading this properly, it's because we are 2 good students.`
+```
 
 
 ## MAN Page
