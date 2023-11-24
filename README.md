@@ -1,32 +1,55 @@
-# Project _printf
-
-This project implements a custom version of the `printf` function in C language.
+# _printf
 
 ## Description
+This project implements a simplified version of the `printf` function in C called `_printf`. The function takes in a format string with specified placeholders and prints formatted output to the standard output.
 
-The file `_printf.c` contains the `_printf` function, which analyzes the format string and prints based on encountered specifiers. Supported specifiers include `%c`, `%s`, `%%`, `%d`, and `%i` to respectively print a character, a string, a percentage, a signed decimal integer, and a signed decimal integer (alias for `%d`).
+## Compilation
+To compile the project, use the following command:
+```bash
+gcc -Wall -Werror -Wextra -pedantic *.c -o printf
 
-The `print_functions.c` file contains associated functions to print different types, such as `print_char`, `print_str`, `print_percent`, and `print_int`.
-
-The `main.h` file is the header file with function declarations and the `print_functions` structure.
-
-The `_putchar.c` file contains the `_putchar` function to print a single character.
-
-## Files
-
-- `_printf.c`
-- `print_functions.c`
-- `main.h`
-- `_putchar.c`
+## Requierements
+The project was developed and tested in an environment using:
+Ubuntu 20
+GCC compiler
+Git
 
 ## Usage
+Usage example
+Here is an example demonstrating the usage of _printf:
 
-Include the `main.h` header file in your program to use the `_printf` function. Then use `_printf` with format specifiers to print characters, strings, and integers.
-
-```c
 #include "main.h"
+#include <stdio.h>
 
-int main(void) {
-    _printf("Hello, %s! Your favorite number is %d.\n", "Alice", 7);
+int main(void)
+{
+    _printf("Hey!! If you are %s, it's because we are %d good students.\n", "reading this properly", 2);
     return (0);
-}
+    }
+
+Result: `Hey!! If you are reading this properly, it's because we are 2 good students.`
+
+
+## MAN Page
+1.To create the man page man_3_printf, execute the following commands:
+`touch man_3_printf`
+2.Open the file man_3_printf with a text editor and add the content for the man page, detailing the usage and parameters of _printf.
+3.Save the file with the appropriate content.
+4.After creating the man_3_printf file, make it executable:
+`chmod +x man_3_printf`
+5.To view the man page, use the `man` command:
+`./man_3_printf`
+This will display the manual page you created for `printf`.
+
+##Testing and Memory Leak Check
+To test the _printf function, you can create test cases and compile them alongside the project files. Additionally, you can use tools like valgrind to check for memory leaks.
+
+Example using valgrind:
+`valgrind ./printf`
+
+##Flowchart
+
+![Flowchart](https://github.com/CappieGold/holbertonschool-printf/raw/master/image.png)
+
+##Authors
+This project was created and maintained by [Carpentier Jeremy](https://github.com/CappieGold) and [Huybrechts Jonathan](https://github.com/Miniknacky).
