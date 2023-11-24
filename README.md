@@ -7,6 +7,7 @@ This project implements a simplified version of the `printf` function in C calle
 To compile the project, use the following command:
 ```bash
 gcc -Wall -Werror -Wextra -pedantic *.c -o printf
+```
 
 ## Requierements
 The project was developed and tested in an environment using:
