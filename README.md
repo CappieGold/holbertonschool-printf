@@ -19,10 +19,11 @@ Git
 Usage example
 Here is an example demonstrating the usage of _printf:
 
+```bash
 #include "main.h"
 #include <stdio.h>
 
-```bash
+
 int main(void)
 {
     _printf("Hey!! If you are %s, it's because we are %d good students.\n", "reading this properly", 2);
