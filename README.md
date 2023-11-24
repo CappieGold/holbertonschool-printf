@@ -45,13 +45,13 @@ Result: `Hey!! If you are reading this properly, it's because we are 2 good stud
 `./man_3_printf`
 This will display the manual page you created for `printf`.
 
-##Testing and Memory Leak Check
+## Testing and Memory Leak Check
 To test the _printf function, you can create test cases and compile them alongside the project files. Additionally, you can use tools like valgrind to check for memory leaks.
 
 Example using valgrind:
 `valgrind ./printf`
 
-##Flowchart
+## Flowchart
 
 ![Flowchart](https://github.com/CappieGold/holbertonschool-printf/raw/master/image.png)
 
